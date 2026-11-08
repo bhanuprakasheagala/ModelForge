@@ -106,10 +106,11 @@ search with embeddings.
 ```text
 ModelForge/
 ├── src/
-│   ├── main.py           # MCP server and public tools
-│   ├── notes.py          # SQLite persistence and queries
-│   ├── ollama_agent.py   # Ollama + MCP client
-│   └── __init__.py
+│   └── modelforge/
+│       ├── __init__.py
+│       ├── main.py           # MCP server and public tools
+│       ├── notes.py          # SQLite persistence and queries
+│       └── ollama_agent.py   # Ollama + MCP client
 ├── data/
 │   └── notes.db          # Created automatically
 ├── pyproject.toml
@@ -171,7 +172,7 @@ cd /path/to/ModelForge
 Before involving an LLM, test the server directly:
 
 ```bash
-uv run mcp dev src/main.py
+uv run mcp dev src/modelforge/main.py
 ```
 
 MCP Inspector lets you see the server's tools and invoke them manually. This
@@ -195,7 +196,7 @@ Title: Project meeting
 Content: The team agreed to review the release checklist on Friday.
 ```
 
-Inspector is the **MCP client**. `src/main.py` is the **MCP server**.
+Inspector is the **MCP client**. `src/modelforge/main.py` is the **MCP server**.
 
 ## How the MCP server works
 
@@ -251,7 +252,7 @@ CREATE TABLE IF NOT EXISTS notes (
 The data path can be changed without editing code:
 
 ```bash
-NOTES_DB_PATH=$HOME/learning-notes.db uv run mcp dev src/main.py
+NOTES_DB_PATH=$HOME/learning-notes.db uv run mcp dev src/modelforge/main.py
 ```
 
 The database layer follows a simple pattern:
@@ -295,7 +296,7 @@ but it is not semantic search: “functions that wrap other functions” and
 Run the natural-language client:
 
 ```bash
-uv run python src/ollama_agent.py
+uv run python -m modelforge.ollama_agent
 ```
 
 Then try:
@@ -406,7 +407,7 @@ Example:
 OLLAMA_MODEL=llama3:latest \
 OLLAMA_TIMEOUT=180 \
 NOTES_DB_PATH=$HOME/learning-notes.db \
-uv run python src/ollama_agent.py
+uv run python -m modelforge.ollama_agent
 ```
 
 ## A small hands-on learning path
@@ -462,8 +463,8 @@ Run from the repository root:
 
 ```bash
 pwd
-ls src/ollama_agent.py
-uv run python src/ollama_agent.py
+ls src/modelforge/ollama_agent.py
+uv run python -m modelforge.ollama_agent
 ```
 
 ### Ollama is already running
@@ -488,7 +489,7 @@ Use the explicit address if necessary:
 
 ```bash
 OLLAMA_HOST=http://127.0.0.1:11434 \
-uv run python src/ollama_agent.py
+uv run python -m modelforge.ollama_agent
 ```
 
 ### Inspector sees different notes
@@ -520,16 +521,16 @@ server are probably correct; the remaining issue is model tool selection.
 uv sync
 
 # Test MCP tools in the browser
-uv run mcp dev src/main.py
+uv run mcp dev src/modelforge/main.py
 
 # Start natural-language chat
-uv run python src/ollama_agent.py
+uv run python -m modelforge.ollama_agent
 
 # Ask one question
-uv run python src/ollama_agent.py "Search my notes for deployment"
+uv run python -m modelforge.ollama_agent "Search my notes for deployment"
 
 # Check Python syntax
-uv run python -m py_compile src/main.py src/notes.py src/ollama_agent.py
+uv run python -m py_compile src/modelforge/main.py src/modelforge/notes.py src/modelforge/ollama_agent.py
 
 # Check installed Ollama models
 ollama list

@@ -5,7 +5,7 @@ from urllib.request import Request, urlopen
 
 from mcp.server import MCPServer
 
-from notes import (
+from modelforge.notes import (
     add_note as add_note_record,
     delete_note as delete_note_record,
     get_note as get_note_record,

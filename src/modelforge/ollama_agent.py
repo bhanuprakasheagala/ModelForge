@@ -211,5 +211,5 @@ if __name__ == "__main__":
         print(asyncio.run(ask_with_mcp_tools(sys.argv[1])))
     else:
         raise SystemExit(
-            "Usage: python src/ollama_agent.py [optional question]"
+            "Usage: python -m modelforge.ollama_agent [optional question]"
         )
