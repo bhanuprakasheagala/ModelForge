@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A hands-on lab for learning and building AI systems"
 readme = "README.md"
 authors = [
-    { name = "bhanuprakasheagala", email = "bhanuprakasheagala@gmail.com" }
+    { name = "bhanuprakasheagala", email = "username@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
