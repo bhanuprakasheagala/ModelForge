@@ -109,5 +109,5 @@ Ollama runs locally by default. If `OLLAMA_HOST` points to a remote server,
 prompts and note contents sent for generation go to that server.
 
 For implementation details, see the
-[package README](../../src/modelforge/README.md). For hands-on steps, see the
-[learning path](../learning/README.md).
+[package README](../src/modelforge/README.md). For hands-on steps, see the
+[learning path](./GettingStarted.md#learning-path).
