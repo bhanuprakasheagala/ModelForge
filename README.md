@@ -87,9 +87,8 @@ send note contents to `OLLAMA_HOST` (local by default).
 
 | Guide | What you’ll find |
 |---|---|
-| [Getting started](docs/getting-started/README.md) | Setup, MCP Inspector, configuration, and troubleshooting |
-| [Architecture & concepts](docs/architecture/README.md) | Request flow, tools, SQLite, and grounded summaries |
-| [Learning path](docs/learning/README.md) | Guided exercises and next steps |
+| [Getting started](docs/GettingStarted.md) | Setup, MCP Inspector, configuration, troubleshooting, and learning path |
+| [Architecture & concepts](docs/Architecture.md) | Request flow, tools, SQLite, and grounded summaries |
 | [Implementation notes](src/modelforge/README.md) | Package responsibilities and development behavior |
 
 ## Development
