@@ -10,4 +10,4 @@ wheels/
 .venv
 
 # Local application data
-data/*.db
+**/data/*.db

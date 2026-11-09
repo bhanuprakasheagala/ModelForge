@@ -6,6 +6,11 @@ resolution-markers = [
     "python_full_version < '3.14'",
 ]
 
+[manifest]
+members = [
+    "modelforge",
+]
+
 [[package]]
 name = "annotated-doc"
 version = "0.0.5"
@@ -364,7 +369,7 @@ wheels = [
 [[package]]
 name = "modelforge"
 version = "0.1.0"
-source = { editable = "." }
+source = { editable = "projects/mcp-notes-assistant" }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
 ]
