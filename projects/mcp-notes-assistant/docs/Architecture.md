@@ -40,7 +40,7 @@ trusted data, provide it to a model, and generate an answer grounded in that
 data. Retrieval is currently keyword- and date-based, not semantic.
 For a step-by-step explanation of the broader RAG pipeline and the planned
 ModelForge learning path, see the
-[RAG tutorial](../../../docs/concepts/rag/RAG-Tutorial.md).
+[RAG tutorial](../../rag-notes-assistant/RAG-Tutorial.md).
 
 ## MCP tools
 

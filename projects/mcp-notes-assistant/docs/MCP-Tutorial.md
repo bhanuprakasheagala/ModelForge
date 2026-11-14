@@ -739,5 +739,5 @@ specification. Use the versioned official pages for normative requirements:
 - [MCP Inspector](https://modelcontextprotocol.io/docs/2026-07-28/tools/inspector)
 
 For project-specific setup, see
-[MCP project getting started](../../../projects/mcp-notes-assistant/docs/GettingStarted.md)
-and [MCP project architecture](../../../projects/mcp-notes-assistant/docs/Architecture.md).
+[MCP project getting started](GettingStarted.md)
+and [MCP project architecture](Architecture.md).

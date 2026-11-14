@@ -136,9 +136,9 @@ file at once.
 
 For a conceptual guide to MCP roles, capabilities, protocol flow, transports,
 and security, see the
-[MCP beginner tutorial](../../../docs/concepts/mcp/MCP-Tutorial.md).
+[MCP beginner tutorial](MCP-Tutorial.md).
 For a practical introduction to retrieval-augmented generation, see the
-[RAG tutorial](../../../docs/concepts/rag/RAG-Tutorial.md).
+[RAG tutorial](../../rag-notes-assistant/RAG-Tutorial.md).
 
 ## Trace a request
 
