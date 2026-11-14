@@ -13,17 +13,14 @@ a later exercise intentionally connects them.
 
 ---
 
-## Learning concepts
+## Project learning guides
 
-Conceptual material is kept separate from runnable applications:
+Each tutorial is kept with the project it explains:
 
 | Concept | Learning guide | Related project |
 |---|---|---|
-| MCP | [Beginner tutorial](docs/concepts/mcp/MCP-Tutorial.md) | [MCP notes assistant](projects/mcp-notes-assistant/README.md) |
-| RAG | [Practical tutorial](docs/concepts/rag/RAG-Tutorial.md) | [RAG project space](projects/rag-notes-assistant/README.md) |
-
-See the [concepts index](docs/concepts/README.md) for the learning areas and
-guidance on adding future concepts.
+| MCP | [Beginner tutorial](projects/mcp-notes-assistant/docs/MCP-Tutorial.md) | [MCP notes assistant](projects/mcp-notes-assistant/README.md) |
+| RAG | [Practical tutorial](projects/rag-notes-assistant/RAG-Tutorial.md) | [RAG project space](projects/rag-notes-assistant/README.md) |
 
 ## Projects
 
@@ -52,11 +49,11 @@ instructions are documented in the
 ## Repository layout
 
 ```text
-docs/
-  concepts/       Concept tutorials and index
 projects/
   mcp-notes-assistant/
+    docs/         MCP tutorial and project documentation
   rag-notes-assistant/
+    RAG-Tutorial.md
 ```
 
 > **Learning repository:** projects are for understanding and experimenting
